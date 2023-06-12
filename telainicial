@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabela de Dados</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>NOME</th>
+                <th><input type="text" id="header2Input"></th>
+                <th><input type="text" id="header3Input"></th>
+                <th><input type="text" id="header4Input"></th>
+                <th><input type="text" id="header5Input"></th>
+                <th><input type="text" id="header6Input"></th>
+                <th><input type="text" id="header7Input"></th>
+                <th><input type="text" id="header8Input"></th>
+                <th><input type="text" id="header9Input"></th>
+                <th><input type="text" id="header10Input"></th>
+                <th><input type="text" id="header11Input"></th>
+                <th><input type="text" id="header12Input"></th>
+                <th><input type="text" id="header13Input"></th>
+                <th><input type="text" id="header14Input"></th>
+                <th><input type="text" id="header15Input"></th>
+                <th><input type="text" id="header16Input"></th>
+                <th><input type="text" id="header17Input"></th>
+                <th><input type="text" id="header18Input"></th>
+                <th><input type="text" id="header19Input"></th>
+                <th><input type="text" id="header20Input"></th>
+                <th><input type="text" id="header21Input"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" id="nomeInput"></td>
+                <td>
+                    <select id="opcaoSelect">
+                        <option value="ok">OK</option>
+                        <option value="parcial">PARCIAL</option>
+                        <option value="nao">NÃO</option>
+                    </select>
+                </td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+                <td><select class="opcaoSelect"></select></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="salvarDados()">Salvar</button>
+
+    <script>
+        var opcaoSelect = document.getElementById("opcaoSelect");
+        var opcaoSelects = document.getElementsByClassName("opcaoSelect");
+
+        for (var i = 0; i < opcaoSelects.length; i++) {
+            var option;
+
+            for (var j = 0; j < opcaoSelect.options.length; j++) {
+                option = document.createElement("option");
+                option.value = opcaoSelect.options[j].value;
+                option.text = opcaoSelect.options[j].text;
+
+                opcaoSelects[i].add(option);
+            }
+        }
+
+        function salvarDados() {
+            var nome = document.getElementById("nomeInput").value;
+            var header2 = document.getElementById("header2Input").value;
+            var header3 = document.getElementById("header3Input").value;
+            var header4 = document.getElementById("header4Input").value;
+            var header5 = document.getElementById("header5Input").value;
+            var header6 = document.getElementById("header6Input").value;
+            var header7 = document.getElementById("header7Input").value;
+            var header8 = document.getElementById("header8Input").value;
+            var header9 = document.getElementById("header9Input").value;
+            var header10 = document.getElementById("header10Input").value;
+            var header11 = document.getElementById("header11Input").value;
+            var header12 = document.getElementById("header12Input").value;
+            var header13 = document.getElementById("header13Input").value;
+            var header14 = document.getElementById("header14Input").value;
+            var header15 = document.getElementById("header15Input").value;
+            var header16 = document.getElementById("header16Input").value;
+            var header17 = document.getElementById("header17Input").value;
+            var header18 = document.getElementById("header18Input").value;
+            var header19 = document.getElementById("header19Input").value;
+            var header20 = document.getElementById("header20Input").value;
+            var header21 = document.getElementById("header21Input").value;
+
+            // Aqui você pode fazer o que desejar com os dados salvos
+            // Por exemplo, enviar para um servidor ou armazenar localmente
+
+            console.log("Dados Salvos:");
+            console.log("Nome: " + nome);
+            console.log("Header2: " + header2);
+            console.log("Header3: " + header3);
+            console.log("Header4: " + header4);
+            console.log("Header5: " + header5);
+            console.log("Header6: " + header6);
+            console.log("Header7: " + header7);
+            console.log("Header8: " + header8);
+            console.log("Header9: " + header9);
+            console.log("Header10: " + header10);
+            console.log("Header11: " + header11);
+            console.log("Header12: " + header12);
+            console.log("Header13: " + header13);
+            console.log("Header14: " + header14);
+            console.log("Header15: " + header15);
+            console.log("Header16: " + header16);
+            console.log("Header17: " + header17);
+            console.log("Header18: " + header18);
+            console.log("Header19: " + header19);
+            console.log("Header20: " + header20);
+            console.log("Header21: " + header21);
+        }
+    </script>
+</body>
+</html>
